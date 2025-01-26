@@ -55,7 +55,6 @@ class MainActivity : ComponentActivity() {
                             .padding(innerPadding)
                     ) {
 
-
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -73,10 +72,10 @@ class MainActivity : ComponentActivity() {
                                 ("rubber Duck" to  rubberDuck))
 
                             list.forEach { (key ,subclass) ->
-                                ButtonItem("${key}") {
+                                ButtonItem(key) {
                                     Toast.makeText(
                                         this@MainActivity,
-                                        "${subclass.display()}",
+                                        subclass.display(),
                                         Toast.LENGTH_LONG
                                     ).show()
                                 }
@@ -84,7 +83,6 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 }
-
             }
         }
     }
